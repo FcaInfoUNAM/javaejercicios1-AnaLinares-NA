@@ -7,21 +7,16 @@ public class Padre {
     }
    
 }
-public class Hijo extends Padre{
-    String nombre;
-    public Hijo(String nombre, String apellido){
-        super(apellido);
-        this.nombre=nombre;
+
+/ Método test que crea una instancia de EspirituSanto y llama a pruebaPaternidad
+    public void test() {
+        // Creación del objeto Hijo
+        Hijo hijo = new Hijo("Juan", this.apellido);
+        
+        // Creación del objeto EspirituSanto
+        EspirituSanto espirituSanto = new EspirituSanto(hijo.nombre, this.apellido, "Lopez");
+        
+        // Llamada al método pruebaPaternidad
+        Boolean resultado = espirituSanto.pruebaParternidad();
+        System.out.println("El resultado de la prueba de paternidad es: " + resultado);
     }
-}
-public class EspirituSanto extends Hijo {
-    String apellidoReal;
-    public EspirituSanto(String nombre, String apellido, String apellidoReal){
-        super(nombre, apellido);
-        this.apellidoReal = apellidoReal;
-    }
-    public Boolean pruebaParternidad(){
-        return this.apellido == this.apellidoReal;
-    }
-    
-}
