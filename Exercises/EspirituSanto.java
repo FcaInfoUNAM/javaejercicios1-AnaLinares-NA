@@ -2,14 +2,11 @@ package Exercises;
 
 public class EspirituSanto extends Hijo {
     String apellidoReal;
-
-    public EspirituSanto(String nombre, String apellido, String apellidoReal) {
+    public EspirituSanto(String nombre, String apellido, String apellidoReal){
         super(nombre, apellido);
         this.apellidoReal = apellidoReal;
     }
-
-    // Método que verifica si el apellido coincide con el apellidoReal
-    public Boolean pruebaParternidad() {
+    public Boolean pruebaPaternidad(){        
         return this.apellido.equals(this.apellidoReal);
     }
 }
